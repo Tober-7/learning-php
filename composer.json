@@ -1,0 +1,6 @@
+{
+    "name": "tober/php-learning",
+    "require": {
+        "guzzlehttp/guzzle": "^7.8"
+    }
+}
