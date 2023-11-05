@@ -12,7 +12,7 @@
 
     <hr class="border">
 
-    <form action="./src/plugins/student.php" method="post">
+    <form action="./src/plugins/profile.php" method="post">
         Name
         <hr class="small">
         <input type="text" name="name" autocomplete="off">
