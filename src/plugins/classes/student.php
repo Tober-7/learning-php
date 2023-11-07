@@ -12,9 +12,9 @@ class Student {
 
         $allStudents = Helpers::getJSONData(Student::path);
 
-        for ($i = 0; $i < count($allStudents); $i++) {
-            if ($allStudents[$i]["name"] == $name) {
-                if ($_POST && $_POST["action"] == "submitNewArrival") $allStudents[$i]["arrivals"] += 1;
+        foreach ($allStudents as $student) {
+            if ($student["name"] == $name) {
+                if ($_POST && $_POST["action"] == "submitNewArrival") $student["arrivals"] += 1;
                 $newStudent = false;
             }
         }
@@ -26,8 +26,8 @@ class Student {
     static function getStudent($name) {
         $allStudents = Helpers::getJSONData(Student::path);
 
-        for ($i = 0; $i < count($allStudents); $i++) {
-            if ($allStudents[$i]["name"] == $name) return $allStudents[$i];
+        foreach ($allStudents as $student) {
+            if ($student["name"] == $name) return $student;
         }
     }
 }
