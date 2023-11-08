@@ -1,6 +1,6 @@
 <?php
 
-$pathHelpers = "../assets/classes/helpers.php";
+$pathHelpers = "helpers.php";
 
 require_once($pathHelpers);
 

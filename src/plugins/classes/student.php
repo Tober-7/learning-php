@@ -1,6 +1,6 @@
 <?php
 
-$pathHelpers = "../assets/classes/helpers.php";
+$pathHelpers = "helpers.php";
 
 require_once($pathHelpers);
 
@@ -12,9 +12,9 @@ class Student {
 
         $allStudents = Helpers::getJSONData(Student::path);
 
-        foreach ($allStudents as $student) {
+        foreach ($allStudents as $key => $student) {
             if ($student["name"] == $name) {
-                if ($_POST && $_POST["action"] == "submitNewArrival") $student["arrivals"] += 1;
+                if ($_POST && $_POST["action"] == "submitNewArrival") $allStudents[$key]["arrivals"] += 1;
                 $newStudent = false;
             }
         }

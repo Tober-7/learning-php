@@ -12,8 +12,8 @@
 </head>
 <body>
     <?php
-        $pathStudent = "../assets/classes/student.php";
-        $pathArrivals = "../assets/classes/arrivals.php";
+        $pathStudent = "./classes/student.php";
+        $pathArrivals = "./classes/arrivals.php";
 
         $currentDate = date("G:i:s - l (jS \of F) - Y");
         $currentHour = date("G");
